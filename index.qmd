@@ -4,7 +4,9 @@ title: "Doah's Website"
 
 # Welcome to my website :)
 
-Hello! I hope your day is going well for you. There isn't much here yet, but follow along as I develop on this workspace!
+Hello! I hope your day is going well for you.
+
+There isn't much here yet, but follow along as I develop on this workspace!
 
 ## Self-Introduction
 
@@ -14,11 +16,11 @@ To start off, here is a brief introduction about myself. My name is Doah Kim, a 
 
 I have currently identified 2 datasets for my project.
 
-\(1\) customer_segmentation_data
+#### (1) customer_segmentation_data
 
 Contains: Loan_ID, Gender, Married, Dependents, Education, Self_Employed, ApplicantIncome, CoapplicantIncome, LoanAmount, Loan_Amount_Term, Credit_History, Property_Area
 
-\(2\) loan_sanction_test
+#### (2) loan_sanction_test
 
 Contains: Customer ID, Age, Gender, Marital Status, Education Level, Geographic Information, Occupation, Income Level, Behavioral Data, Purchase History, Interactions with Customer Service,Insurance Products Owned, Coverage Amount, Premium Amount, Policy Type, Customer Preferences, Preferred Communication Channel, Preferred Contact Time, Preferred Language, Segmentation Group
 
