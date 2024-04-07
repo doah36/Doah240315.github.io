@@ -1,12 +1,12 @@
-name: KD-fp1
-title: KD-fp1
+name: kdfinal1
+title: kdfinal1
 username: doah240315
 account: doah240315
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 11689132
-bundleId: 8464285
-url: https://doah240315.shinyapps.io/KD-fp1/
+appId: 11689221
+bundleId: 8464344
+url: https://doah240315.shinyapps.io/kdfinal1/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE

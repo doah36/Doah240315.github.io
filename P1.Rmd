@@ -10,7 +10,7 @@ library(ggplot2)
 ```
 
 ```{r, eval=TRUE,echo=FALSE}
-customer_data <- read.csv("/Users/doah/Documents/Doah240315.github.io/work_customer_segmentation_data.csv")
+customer_data <- read.csv("/Users/doah/Documents/Doah240315.github.io/personal_folder/work_customer_segmentation_data.csv")
 ```
 
 ```{r, eval=TRUE,echo=FALSE}
