@@ -25,3 +25,8 @@ Contains: Loan_ID, Gender, Married, Dependents, Education, Self_Employed, Applic
 Contains: Customer ID, Age, Gender, Marital Status, Education Level, Geographic Information, Occupation, Income Level, Behavioral Data, Purchase History, Interactions with Customer Service,Insurance Products Owned, Coverage Amount, Premium Amount, Policy Type, Customer Preferences, Preferred Communication Channel, Preferred Contact Time, Preferred Language, Segmentation Group
 
 I plan to classify the loan types into segments 1\~5 (in dataset 1) based on a certain established criteria and link them to dataset (2) to analyze the relationships.
+
+```{=html}
+<iframe height="400" width="100%" frameborder="no" src="https://doah240315.shinyapps.io/personal_app/"> </iframe>
+```
+
