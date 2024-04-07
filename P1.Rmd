@@ -1,0 +1,68 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, eval=FALSE,echo=FALSE}
+library(shiny)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+```
+
+```{r, eval=TRUE,echo=FALSE}
+customer_data <- read.csv("/Users/doah/Documents/Doah240315.github.io/work_customer_segmentation_data.csv")
+```
+
+```{r, eval=TRUE,echo=FALSE}
+# Change variable names to exclude spaces and include underscores
+names(customer_data) [names(customer_data) == "Marital.Status"] = "Marital_Status" 
+names(customer_data) [names(customer_data) == "Education.Level"] <- "Education_Level" 
+names(customer_data) [names(customer_data) == "Income.Level"] <- "Income_Level"
+names(customer_data) [names(customer_data) == "Behavioral.Data"] <- "Behavioral_Data"
+names(customer_data) [names(customer_data) == "Insurance.Products.Owned"] <- "Insurance_Products_Owned"
+names(customer_data) [names(customer_data) == "Coverage.Amount"] <- "Coverage_Amount"
+names(customer_data) [names(customer_data) == "Premium.Amount"] <- "Premium_Amount"
+names(customer_data) [names(customer_data) == "Policy.Type"] <- "Policy_Type"
+names(customer_data) [names(customer_data) == "Segmentation.Group"] <- "Segmentation_Group"
+
+names(customer_data)
+
+```
+
+```{r}
+# Demographic Distribution
+
+```
+
+```{r, eval=TRUE,echo=FALSE}
+# Boxplot of Coverage Amount by Income Level and Policy Type
+ggplot(customer_data, aes(x = Income_Level, y = Coverage_Amount, fill = Policy_Type)) +
+  geom_boxplot() +
+  labs(title = "Coverage Amount by Income Level and Policy Type",
+       x = "Income Level",
+       y = "Coverage Amount") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+```{r, eval=TRUE,echo=FALSE}
+# Behavioral Data vs. Actual Owned
+ggplot(customer_data, aes(x = Behavioral_Data, y = Insurance_Products_Owned)) +
+  geom_point(aes(color = Policy_Type)) +
+  labs(title = "Insurance Products Owned vs. Behavioral Data",
+       x = "Behavioral Data Score",
+       y = "Number of Products Owned") +
+  scale_color_viridis_d()
+```
+
+
+```{r, eval=TRUE,echo=FALSE}
+# Histogram of Premium Amounts by Segmentation Group
+ggplot(customer_data, aes(x = Premium_Amount, fill = Segmentation_Group)) +
+  geom_histogram(position = "identity", alpha = 1, bins = 10) +
+  labs(title = "Distribution of Premium Amounts by Segmentation Group",
+       x = "Premium Amount",
+       y = "Frequency") +
+  facet_wrap(~Segmentation_Group)
+```
+
