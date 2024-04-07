@@ -1,12 +1,12 @@
-name: kdfinal1
-title: kdfinal1
+name: test1
+title: test1
 username: doah240315
 account: doah240315
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
-appId: 11689221
-bundleId: 8464365
-url: https://doah240315.shinyapps.io/kdfinal1/
+appId: 11689339
+bundleId: 8464368
+url: https://doah240315.shinyapps.io/test1/
 version: 1
 asMultiple: FALSE
 asStatic: FALSE
