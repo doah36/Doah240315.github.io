@@ -26,22 +26,12 @@ Contains: Customer ID, Age, Gender, Marital Status, Education Level, Geographic 
 
 I plan to classify the loan types into segments 1\~5 (in dataset 1) based on a certain established criteria and link them to dataset (2) to analyze the relationships.
 
-
 ### Why is this important?
+
 In today's rapidly evolving financial landscape, the ability to accurately assess and manage loan sanctions is more critical than ever for financial institutions. This website aims to delve into the intricate relationships between demographic factors and loan sanction amounts, leveraging extensive data from our two primary datasets: customer segmentation and loan sanction records. This analysis is not just about numbers; it's about understanding the people behind these numbers—their backgrounds, behaviors, and financial needs.
 
 Financial inclusivity and risk management are at the heart of modern banking practices. (TBC)
 
-###Basic Demographic Statistics of Customers
-
-
-###Relationship between coverage amount, income level and policy type
-
-###Comparison of Behavioral Policy Classification and Actual Insurance Products Owned
-
-###Distribution of Premium amounts by segmentation group
-
 ```{=html}
-<iframe height="400" width="100%" frameborder="no" src="https://doah240315.shinyapps.io/personal_app/"> </iframe>
+<iframe height="400" width="100%" frameborder="no" src="https://doah240315.shinyapps.io/kdfinal1/"> </iframe>
 ```
-

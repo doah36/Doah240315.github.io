@@ -2,17 +2,16 @@ library(shiny)
 library(ggplot2)
 library(dplyr)
 
-data <- customer_data
-
+data <- read.csv("work_customer_segmentation_data.csv")
 # Define UI
 ui <- fluidPage(
   titlePanel("Interactive Customer Segmentation Data"),
   sidebarLayout(
     sidebarPanel(
       selectInput("genderInput", "Gender", choices = unique(data$Gender), selected = unique(data$Gender)[1], multiple = TRUE),
-      selectInput("maritalStatusInput", "Marital Status", choices = unique(data$Marital_Status), selected = unique(data$Marital_Status)[1], multiple = TRUE),
+      selectInput("maritalStatusInput", "Marital Status", choices = unique(data$Marital.Status), selected = unique(data$Marital.Status)[1], multiple = TRUE),
       sliderInput("ageInput", "Age Range", min = min(data$Age), max = max(data$Age), value = c(min(data$Age), max(data$Age))),
-      sliderInput("incomeInput", "Income Level Range", min = min(data$Income_Level), max = max(data$Income_Level), value = c(min(data$Income_Level), max(data$Income_Level)))
+      sliderInput("incomeInput", "Income Level Range", min = min(data$Income.Level), max = max(data$Income.Level), value = c(min(data$Income.Level), max(data$Income.Level)))
     ),
     mainPanel(
       tabsetPanel(type = "tabs",
@@ -29,9 +28,9 @@ server <- function(input, output) {
   filteredData <- reactive({
     data %>%
       filter(Gender %in% input$genderInput,
-             Marital_Status %in% input$maritalStatusInput,
+             Marital.Status %in% input$maritalStatusInput,
              Age >= input$ageInput[1], Age <= input$ageInput[2],
-             Income_Level >= input$incomeInput[1], Income_Level <= input$incomeInput[2])
+             Income.Level >= input$incomeInput[1], Income.Level <= input$incomeInput[2])
   })
   
   output$summary <- renderPrint({
@@ -43,7 +42,7 @@ server <- function(input, output) {
   })
   
   output$incomePlot <- renderPlot({
-    ggplot(filteredData(), aes(x = Income_Level)) + geom_histogram(bins = 30) + theme_minimal()
+    ggplot(filteredData(), aes(x = Income.Level)) + geom_histogram(bins = 30) + theme_minimal()
   })
 }
 
