@@ -21,10 +21,10 @@ This project is driven by a broader aim to contribute to economic stability and 
 ## Datasets for My Project
 
 Customer_Segmentation_Data
+
 ```{=html}
 <iframe height="700" width="100%" frameborder="no" src="https://doah240315.shinyapps.io/kdfinal1/"> </iframe>
 ```
-
 ## Exploring Demographics
 
 Below are the demographic details of the insurance applicants and owners, for a better understanding of data
@@ -32,5 +32,3 @@ Below are the demographic details of the insurance applicants and owners, for a 
 ```{=html}
 <iframe height="700" width="100%" frameborder="no" src="https://doah240315.shinyapps.io/kdfinal1/"> </iframe>
 ```
-
-
