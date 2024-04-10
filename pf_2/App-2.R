@@ -3,7 +3,7 @@ library(ggplot2)
 library(dplyr)
 library(readr)
 
-data <- read_csv("personal_folder/work_customer_segmentation_data.csv")
+data <- read_csv("work_customer_segmentation_data.csv")
 View(data)
 
 

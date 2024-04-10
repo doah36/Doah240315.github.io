@@ -1,5 +1,8 @@
 ---
-title: "Customer Segmentation"
+title: "Customer Analysis"
 ---
 
+
 Analysis of Customer Demographics and Insurance Details
+
+
