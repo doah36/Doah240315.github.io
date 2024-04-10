@@ -6,7 +6,6 @@ data <- read.csv("work_customer_segmentation_data.csv")
 
 # Define UI
 ui <- fluidPage(
-  titlePanel("Interactive Customer Segmentation Data"),
   sidebarLayout(
     sidebarPanel(
       selectInput("genderInput", "Gender", choices = unique(data$Gender), selected = unique(data$Gender)[1], multiple = TRUE),

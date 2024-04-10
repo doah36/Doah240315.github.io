@@ -2,7 +2,6 @@ library(shiny)
 library(DT)
 
 ui <- fluidPage(
-  titlePanel("Dataset Variable Descriptions"),
   DTOutput("columnDescriptionTable")
 )
 
