@@ -3,6 +3,7 @@ library(ggplot2)
 library(dplyr)
 
 data <- read.csv("work_customer_segmentation_data.csv")
+
 # Define UI
 ui <- fluidPage(
   titlePanel("Interactive Customer Segmentation Data"),
@@ -10,7 +11,7 @@ ui <- fluidPage(
     sidebarPanel(
       selectInput("genderInput", "Gender", choices = unique(data$Gender), selected = unique(data$Gender)[1], multiple = TRUE),
       selectInput("maritalStatusInput", "Marital Status", choices = unique(data$Marital.Status), selected = unique(data$Marital.Status)[1], multiple = TRUE),
-      sliderInput("ageInput", "Age Range", min = min(data$Age), max = max(data$Age), value = c(min(data$Age), max(data$Age))),
+      sliderInput("ageInput", "Age Range", min = min(data$Age), max = max(data$Age), value = c(min(data$Age), max(data$Age)), step = 1),
       sliderInput("incomeInput", "Income Level Range", min = min(data$Income.Level), max = max(data$Income.Level), value = c(min(data$Income.Level), max(data$Income.Level)))
     ),
     mainPanel(
