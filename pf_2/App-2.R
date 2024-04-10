@@ -26,7 +26,7 @@ ui <- fluidPage(
 )
 
 server <- function(input, output) {
-  data <- read_csv("path_to_your_file/work_customer_segmentation_data.csv")
+  data <- read_csv("work_customer_segmentation_data.csv")
   
   observeEvent(input$analyze, {
     output$relationshipPlot <- renderPlot({
