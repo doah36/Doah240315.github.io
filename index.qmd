@@ -18,6 +18,8 @@ Financial inclusivity and risk management are at the heart of modern banking pra
 
 This project is driven by a broader aim to contribute to economic stability and growth. According to studies by entities like the Federal Reserve and the McKinsey Global Institute, well-informed loan sanctioning can unlock new credit markets, thus stimulating economic activities and supporting small and medium-sized enterprises—the backbone of our economy.
 
+## Dataset Variable Description
+
 ```{=html}
 <iframe height="700" width="100%" frameborder="no" src="https://doah240315-2.shinyapps.io/dataset/"> </iframe>
 ```

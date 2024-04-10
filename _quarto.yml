@@ -3,16 +3,21 @@ project:
   output-dir: docs
 
 website:
-  title: "Doah240315.github.io"
+  title: "DOAH"
   navbar:
+    background: primary
+    search: true
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - text: "Home"
+        file: index.qmd
+      - text: "Customer Analysis" 
+      - CusSeg.qmd
+      - text: "Conclusion"
+      - Conclusion.qmd 
 
 format:
   html:
-    theme: cosmo
+    theme: spacelab
     css: styles.css
     toc: true
 
