@@ -3,7 +3,7 @@ library(ggplot2)
 library(dplyr)
 library(readr)
 
-data <- read_csv("work_customer_segmentation_data.csv")
+data <- read_csv("pf_2/work_customer_segmentation_data.csv")
 View(data)
 
 
@@ -18,6 +18,8 @@ ui <- fluidPage(
                   choices = c("Coverage Amount", "Premium Amount")),
       actionButton("analyze", "Analyze")
     ),
+    
+
     mainPanel(
       plotOutput("relationshipPlot"),
       verbatimTextOutput("statSummary")
@@ -26,7 +28,7 @@ ui <- fluidPage(
 )
 
 server <- function(input, output) {
-  data <- read_csv("work_customer_segmentation_data.csv")
+  data <- read_csv("pf_2/work_customer_segmentation_data.csv")
   
   observeEvent(input$analyze, {
     output$relationshipPlot <- renderPlot({
