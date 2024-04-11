@@ -6,9 +6,7 @@ library(readr)
 data <- read_csv("work_customer_segmentation_data.csv")
 
 ui <- fluidPage(
-  titlePanel("Demographics and Insurance Analysis"),
-  
-  sidebarLayout(
+sidebarLayout(
     sidebarPanel(
       selectInput("demographicVar", "Select Demographic Variable:", 
                   choices = c("Gender", "Age", "Income Level", "Education Level", "Marital Status")),
