@@ -2,7 +2,6 @@
 title: "Customer Analysis"
 ---
 
+## Analysis of Customer Demographics and Insurance Details
 
-Analysis of Customer Demographics and Insurance Details
-
-
+`<iframe height="700" width="100%" frameborder="no" src="`{=html}<https://doah240315-2.shinyapps.io/app-2/>`"</iframe>`{=html}

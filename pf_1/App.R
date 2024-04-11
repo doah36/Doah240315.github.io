@@ -4,7 +4,6 @@ library(dplyr)
 
 data <- read.csv("work_customer_segmentation_data.csv")
 
-# Define UI
 ui <- fluidPage(
   sidebarLayout(
     sidebarPanel(
@@ -23,7 +22,6 @@ ui <- fluidPage(
   )
 )
 
-# Define server logic
 server <- function(input, output) {
   filteredData <- reactive({
     data %>%
