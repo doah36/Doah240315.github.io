@@ -31,9 +31,8 @@ server <- function(input, output) {
       demographic <- rlang::sym(input$demographicVar)
       financial <- rlang::sym(input$financialVar)
       
-      # Conditional plotting based on the selected demographic variable
       if (input$demographicVar == "Age") {
-        # Age: Use line plot for continuous variable
+        # Age: line plot
         age_data <- data %>%
           group_by(!!demographic) %>%
           summarise(MeanFinancial = mean(!!financial, na.rm = TRUE))
@@ -43,7 +42,7 @@ server <- function(input, output) {
           labs(title = paste("Average", input$financialVar, "by Age"),
                x = "Age", y = paste("Average", input$financialVar))
       } else if (input$demographicVar == "Income Level") {
-        # Income Level: Use bar plot for categorical variable
+        # Income Level: bar plot
         income_data <- data %>%
           group_by(!!demographic) %>%
           summarise(MeanFinancial = mean(!!financial, na.rm = TRUE))
@@ -53,7 +52,7 @@ server <- function(input, output) {
           labs(title = paste("Average", input$financialVar, "by Income Level"),
                x = "Income Level", y = paste("Average", input$financialVar))
       } else {
-        # Gender, Education Level, Marital Status: Use boxplot for categorical variables
+        # Gender, Education Level, Marital Status: boxplot
         ggplot(data, aes(x = factor(!!demographic), y = !!financial, fill = factor(!!demographic))) +
           geom_boxplot() +
           labs(title = paste("Distribution of", input$financialVar, "across", input$demographicVar),
@@ -63,12 +62,10 @@ server <- function(input, output) {
     
     output$statSummary <- renderPrint({
       if (input$demographicVar %in% c("Age", "Income Level")) {
-        # Statistical summary for numeric variables
         res <- cor.test(data[[input$demographicVar]], data[[input$financialVar]], method = "pearson")
         cat("Correlation between", input$demographicVar, "and", input$financialVar, ":\n")
         cat("Correlation Coefficient:", res$estimate, "\nP-value:", res$p.value, "\n")
       } else {
-        # Statistical summary for categorical variables
         cat("Frequency Table for", input$demographicVar, ":\n")
         print(table(data[[input$demographicVar]]))
       }

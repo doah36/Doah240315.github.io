@@ -2,6 +2,25 @@
 title: "Customer Analysis"
 ---
 
-## Analysis of Customer Demographics and Insurance Details
+### Analysis of Customer Demographics and Insurance Details
 
-<iframe height="700" width="100%" frameborder="no" src="https://doah240315-2.shinyapps.io/app-2"> </iframe>
+<iframe height="600" width="100%" frameborder="no" src="https://doah240315-2.shinyapps.io/app-2"> </iframe>
+
+### Results
+
+#### Gender
+- Both genders demonstrate a similar median coverage amount with males showing slightly more variability.
+- The median premium amounts are also similar across genders, but males have a broader range of premium costs, indicating a diverse male clientele with varied insurance needs.
+
+#### Age
+- The analysis shows no significant correlation between age and financial factors. The variability seen across age groups suggests that while age may be a factor in risk assessment, it does not singularly predict the financial aspects of insurance products.
+
+#### Income Level
+- A weak negative correlation suggests that as income increases, coverage amounts might decrease slightly, which could indicate higher-income individuals opting for different types of insurance products or terms.
+- The lack of a strong relationship between income level and premium amount emphasizes the need for financial institutions to consider other demographic variables and behavioral data when assessing risk and determining premiums.
+
+#### Education Level
+- The similar median values across different education levels suggest that education alone does not have a strong influence on insurance financials. However, the variability within certain education groups indicates that other factors may interplay with education to affect insurance decisions.
+
+#### Marital Status
+- Marital status shows a fairly consistent distribution of financial factors, implying that it should be considered alongside other variables rather than as an independent predictor.
